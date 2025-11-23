@@ -1,0 +1,67 @@
+{
+  "name": "Exercise",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do exercício"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "cardio",
+        "forca",
+        "flexibilidade",
+        "equilibrio",
+        "aerobico"
+      ],
+      "description": "Categoria do exercício"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descrição do exercício"
+    },
+    "duration_minutes": {
+      "type": "integer",
+      "description": "Duração em minutos"
+    },
+    "calories_burned": {
+      "type": "number",
+      "description": "Calorias queimadas (estimativa)"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "iniciante",
+        "intermediario",
+        "avancado"
+      ],
+      "default": "iniciante",
+      "description": "Nível de dificuldade"
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Instruções passo a passo"
+    },
+    "equipment": {
+      "type": "string",
+      "description": "Equipamento necessário"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL da imagem"
+    },
+    "recommended_for_weight_loss": {
+      "type": "boolean",
+      "default": true,
+      "description": "Recomendado para emagrecimento"
+    }
+  },
+  "required": [
+    "name",
+    "category"
+  ]
+}

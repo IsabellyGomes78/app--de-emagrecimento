@@ -1,0 +1,44 @@
+{
+  "name": "DailyLog",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data do registro"
+    },
+    "food_name": {
+      "type": "string",
+      "description": "Nome do alimento consumido"
+    },
+    "portion_grams": {
+      "type": "number",
+      "description": "Porção em gramas"
+    },
+    "meal_type": {
+      "type": "string",
+      "enum": [
+        "cafe_manha",
+        "lanche_manha",
+        "almoco",
+        "lanche_tarde",
+        "jantar",
+        "ceia"
+      ],
+      "description": "Tipo de refeição"
+    },
+    "total_calories": {
+      "type": "number",
+      "description": "Total de calorias consumidas"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Observações"
+    }
+  },
+  "required": [
+    "date",
+    "food_name",
+    "meal_type"
+  ]
+}

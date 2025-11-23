@@ -1,0 +1,61 @@
+{
+  "name": "Food",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do alimento"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "frutas",
+        "vegetais",
+        "proteinas",
+        "graos",
+        "laticinios",
+        "gorduras_saudaveis",
+        "bebidas"
+      ],
+      "description": "Categoria do alimento"
+    },
+    "calories_per_100g": {
+      "type": "number",
+      "description": "Calorias por 100g"
+    },
+    "protein": {
+      "type": "number",
+      "description": "Proteína em gramas por 100g"
+    },
+    "carbs": {
+      "type": "number",
+      "description": "Carboidratos em gramas por 100g"
+    },
+    "fat": {
+      "type": "number",
+      "description": "Gordura em gramas por 100g"
+    },
+    "fiber": {
+      "type": "number",
+      "description": "Fibra em gramas por 100g"
+    },
+    "benefits": {
+      "type": "string",
+      "description": "Benefícios do alimento"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL da imagem"
+    },
+    "recommended_for_weight_loss": {
+      "type": "boolean",
+      "default": true,
+      "description": "Recomendado para emagrecimento"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "calories_per_100g"
+  ]
+}
